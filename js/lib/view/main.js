@@ -1,67 +1,59 @@
-States={
+  var Sudoku = Class.extend({
 
-	NO_CHANGE: 0,
-	MENU: 1,
-	GANE: 2,
-	END: 3,
-	UNDO: 4,
-	RESTART: 5
-	
-
-};
-
-
-var Sudoku = Class.extend({
-
-	 
 	init: function(){
+		
+	
+
+		//rysowanie sudoku
+		this.sudokuArea = new SudokuArea(700,700);
+		this.sudokuArea.getCanvas();
+		this.sudokuArea.getContext();
+
+		// rysowanie menu sudoku
+	///	this.input = new InputHandler5;
+//		menu = new MenuSudoku;
+	//menu.draw();
+//		this.state = new SudokuStates();
 	
 
 
-		this.currentState = null;
-		this.nextState=States.GAME;
-
+	
 	
 	},
 	
 	
 
+	draw: function(){
+		
+		this.sudokuArea.paintCanvas();
+		this.sudokuArea.draw();
+		
+	},
+
 	
 	run: function(){
+	//merody modyfikujÄce sudoku
+
+		//aktualizacja sudoku
+	//this.input3 = new InputHandler1(this.sudokuArea);
+
 	
-	var self = this;
-	if (self.nextState !== States.NO_CHANGE){
-	
-		switch(self.nextState){
+		this.sudokuArea.update();	
 		
-			case States.MENU:
-				self.currentState = new State(self);
-			break;
-			
-			case States.Game:
-				self.currentState = new State(self);
-			break;
-			
-			case States.END:
-			self. currentState = new State(self);
-			break;
-				
-		
-		
-		}
-			self.nextState = States.NO_CHANGE;
-			self.currentState.handleInputs;
-			//self.currentState.update();
-			self.currentState.render(self.canvas.ctx);
-	
-	}
 		$(document).ready(function(){
 	
 		console.log("sudoku");
 
+
 			});
+			
+
+
+	},
+	restart: function(){
+		
+console.log('sudoku restart');
+		
 	}
-
-
+	
 });
-
