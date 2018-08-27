@@ -1,4 +1,3 @@
-a
 
     /* Simple JavaScript Inheritance
      * By John Resig http://ejohn.org/
