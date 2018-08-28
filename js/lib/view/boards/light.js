@@ -10,7 +10,6 @@ var Light=Boards.extend({
 		this.nameCanvas = nameCanvas;
 
 	
-var empty = new Empty;	
 
 
 this._super("light");
