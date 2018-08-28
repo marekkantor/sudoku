@@ -1,30 +1,4 @@
 
-Skip to content
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @marekkantor
-
-0
-0
-
-    0
-
-marekkantor/sudoku
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Insights
-Settings
-sudoku/js/lib/controller/Eve
-ad5c2b0 22 hours ago
-@marekkantor marekkantor Create Eve
-720 lines (420 sloc) 11.7 KB
 var MousePosition = Class.extend({
 	
 	init: function(x,y){
