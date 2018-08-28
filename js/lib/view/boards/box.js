@@ -1,4 +1,4 @@
-var Box=SubCell.extend({
+var Box= Class.extend({
 	
 	init: function(wiersz,kolumna){
 		
