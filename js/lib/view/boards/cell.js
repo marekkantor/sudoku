@@ -277,7 +277,7 @@ this.skresl = false;
 		this._super();
 	},
   	
-		return this.clicked
+		return this.clicked;
 	}
 	
 
