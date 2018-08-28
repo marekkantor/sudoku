@@ -318,7 +318,7 @@ var currentPieces = Class.extend({
 	}
 })
 
-ar Cell=Pieces.extend({
+var Cell=Pieces.extend({
 
 	width: null,
 	height: null,
