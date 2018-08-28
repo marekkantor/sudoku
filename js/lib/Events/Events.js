@@ -386,8 +386,8 @@ var InputHandler = Xboard.extend({
 		empty = new Empty;
 		this._super(empty);
 		
-		sudokuEvents = new SudokuEvents;
-		choosenSubcells =sudokuEvents.getSubcells();
+		//sudokuEvents = new SudokuEvents;
+		//choosenSubcells =sudokuEvents.getSubcells();
 				
 	gameRestart = false;
 	var i=-1;
