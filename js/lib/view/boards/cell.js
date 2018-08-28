@@ -760,6 +760,8 @@ var choosenSubcell = SubCell.extend({
 	getID: function(){
 		return this.id;
 	},	
+	
+	
 	hasClicked: function(wiersz,kolumna){
 this.wiersz = wiersz;
 this.kolumna = kolumna;
@@ -876,3 +878,26 @@ var ChooseSubcell = SubCell.extend({
 	}
 });
 	 
+
+strikePieces=Pieces.extend({
+
+/**
+"skreślone" pieces
+**/
+
+	init: function(wiersz,kolumna){
+	
+		this.wiersz=wiersz;
+		this.kolumna=kolumna;
+			this.pieces = new Pieces;
+	},
+	draw: function(){
+	var X = this.pieces.drawX(this.wiersz,this.kolumna);
+	},
+	
+	strikes: function(){
+	return  X;
+	}
+	
+
+});
