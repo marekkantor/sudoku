@@ -509,7 +509,7 @@ console.log(this.xboard.get());
 
 		var RESTART = 0;
 		var MENU = 0;
-		this.input = new InputHandler5(this.piecess,this.light,RESTART);
+		this.input = new InputHandler(this.piecess,this.light,RESTART);
 	
 
 	
