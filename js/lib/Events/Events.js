@@ -1,3 +1,100 @@
+var Xboard = Pieces.extend({
+	init: function(pieces){
+		
+		this.pieces = pieces;
+		piecesArray = [ ];	
+		///!!! DO POPRAWY
+			var gNumbPieces = 9*9*9*9;
+	
+		
+		for (var i = 0; i<gNumbPieces; i++){
+			
+			piecesArray[i] =  this.pieces;
+			
+		}
+		piecesArray[9] = this.pieces;
+		piecesArray[21] = this.pieces;
+				piecesArray[64] = this.pieces;
+		
+		this.xboard = getEl('xboard');
+	//	alert('offsetLeft' + this.xboard.offsetLeft);
+		
+				
+		return piecesArray;
+		/*
+		empty = new Empty;
+
+		piecesArray = [empty,empty,empty,
+							empty,empty,empty,
+							empty,empty,empty]
+							*/
+							
+					},
+		render: function(){
+			if (!piecesArray[0].isEmpty()){
+			piecesArray[0].render();
+			}
+		},
+
+		checkPieces: function(pieces){
+			
+			var EMPTY = true;
+		this.pieces = pieces;
+		this.pieces.id = 3*this.pieces.wiersz + this.pieces.kolumna;
+		var gSelectedPieceIndex = this.pieces.gSelectedPieceIndex();
+		
+		pieces = piecesArray[gSelectedPieceIndex];
+		
+		
+		this._super(pieces);
+			
+			
+		},
+		hanndleInputs: function(pieces){
+			alert('hanndleInputs');
+			this.pieces = pieces;
+		alert('hdl' + this.pieces.wiersz);
+this._super(this.pieces);
+		}, 
+		update: function(){
+			
+			this._super();
+
+		},
+		_update: function(){
+			
+		this._super();	
+		},
+		draw: function(){
+		
+					var len = piecesArray.length;
+			for (var i = 0; i<len; i++){
+				if (!piecesArray[0].isEmpty()){
+				piecesArray[0].draw();
+				}
+			}
+			return;
+			
+		},
+		
+		reset: function(){
+				var len = piecesArray.length;
+				for (var i = 0; i<len; i++){
+					piecesArray[i] = empty;
+				}
+				return;
+		},
+		get: function(id){
+			
+			this.id = id;
+		
+			return piecesArray[this.id];	
+		},
+		onclicked: function(){
+			
+			console.log("onclicked");
+		}
+})
 
 var MousePosition = Class.extend({
 	
