@@ -1,8 +1,14 @@
-var Box =SubCell.extend({
+var Box=SubCell.extend({
 	
 	init: function(wiersz,kolumna){
 		
-	
+			this.hidden =[ ];
+					for (var i = 0; i < 9*9*9; i++){
+					this.hidden[i] = true;
+				
+				}
+		this.hidden[0] = true;
+				this.hidden[1] = true;
 			this.wiersz = wiersz;
 			this.kolumna = kolumna;
 			
@@ -32,7 +38,15 @@ var Box =SubCell.extend({
 			
 				this.drawLines = function(){
 					
-		
+						this.points = new Array();
+			
+			p = this.points;
+			p[0] = 20;
+			p[1] = 20 ;
+			
+			a = this.points;
+			a[0] = 40;
+			a[1] = 40;
 					lctx.beginPath();
 					lctx.moveTo(this.x,this.picessize+this.kolumna*this.subcellsize);
 					lctx.lineTo(this.y,this.picessize+this.kolumna*this.subcellsize);
@@ -57,5 +71,15 @@ var Box =SubCell.extend({
 				};
 			this.drawLines();
 			
+		},
+		clearAll: function(lctx, wiersz,kolumna ){
+
+		this.wiersz = wiersz;
+		this.kolumna = kolumna;
+		this.light = getEl("light");	
+		lctx = this.light.getContext("2d");
+		lctx.clearRect(this.subcellsize,this.subcellsize,0,0);
+
+
 		}
 });
