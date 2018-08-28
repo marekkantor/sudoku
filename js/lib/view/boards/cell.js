@@ -302,19 +302,7 @@ var currentPieces = Class.extend({
 				 cp = this.cp[i];
 				 this.wiersz_ = Math.floor(this.wiersz/3);
 				 this.kolumna_ = Math.floor(this.kolumna/3);
-				if ((this.wiersz_ == cp.wiersz) && (this.kolumna_ == cp.kolumna)){
-					
-					this.control =!this.control;//true
-					return this.control;
-				}
-			}
-			
-			return this.control;
-			
-
-
-		
-		
+		}
 	}
 })
 
