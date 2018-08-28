@@ -347,7 +347,7 @@ this._super(this.pieces);
 })
 
 
-var InputHandler5 = Xboard.extend({
+var InputHandler = Xboard.extend({
 	
 
 	init: function(piecess,light,restart){
