@@ -392,13 +392,13 @@ var InputHandler = Xboard.extend({
 	gameRestart = false;
 	var i=-1;
 	 //document.onclick = new SudokuEvents;
-	 MenuButtons = new _MenuButtons;
+	/* MenuButtons = new _MenuButtons;
 	 RESTART = MenuButtons.RESTART;
 
 	MenuSudoku = new MenuSudoku(RESTART);
 
 	MenuEvents = new MenuEvents(xboard,MenuSudoku);
-
+*/
 	this.onclicked(xboard,light,piecess);
 	},
 	onclicked: function(xboard,light,piecess){
