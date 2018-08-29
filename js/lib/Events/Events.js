@@ -34,7 +34,7 @@ var Xboard = Pieces.extend({
 			if (!piecesArray[0].isEmpty()){
 			piecesArray[0].render();
 			}
-		}, 
+		},  
 
 		checkPieces: function(pieces){
 			
