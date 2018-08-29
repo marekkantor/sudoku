@@ -308,7 +308,8 @@ var InputHandler = Xboard.extend({
 		
 this.piecess = piecess;
 piecess = this.piecess;
-	document.oncontextmenu = this.oncontextmenu;
+this.gameRestart = false;
+		document.oncontextmenu = this.oncontextmenu;
 		
 		
 	var blurred = false;
