@@ -190,7 +190,12 @@ if (this.choosenPieces!= undefined){
 
 			subcell = this.subcell;
 			
-					if(sudokuEvents.isClicked(subcell)){
+	
+					if (this.subcell!= null){
+			this.subcell.id =  (((this.subcell.wiersz )*9) +this.subcell.kolumna);
+			gSelectedPieceIndex = this.subcell.getSubCellIndex();
+		chooseSubcell = choosenSubcells[gSelectedPieceIndex];
+				
 						if(chooseSubcell.isEmpty()){
 
 		this.piecess = this.subcell.get();
