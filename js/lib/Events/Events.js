@@ -308,7 +308,7 @@ var InputHandler = Xboard.extend({
 		
 this.piecess = piecess;
 piecess = this.piecess;
-this.gameRestart = false;
+var gameRestart = false;
 		document.oncontextmenu = this.oncontextmenu;
 		
 		
