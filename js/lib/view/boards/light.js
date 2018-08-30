@@ -126,11 +126,11 @@ for (var i =0;i<len; i++){
 }
 
 
-var choosenSubcells = [ ]; 
+this.choosenSubcells = [ ]; 
 var sudNumbSubcell = 9 * 9;
 empty = new Empty;
 for (var i = 0; i<len; i++){
-choosenSubcells[i] = empty; 
+this.choosenSubcells[i] = empty; 
 }
 },
 
@@ -194,7 +194,7 @@ if (this.choosenPieces!= undefined){
 					if (this.subcell!= null){
 			this.subcell.id =  (((this.subcell.wiersz )*9) +this.subcell.kolumna);
 			gSelectedPieceIndex = this.subcell.getSubCellIndex();
-		chooseSubcell = choosenSubcells[gSelectedPieceIndex];
+		chooseSubcell = this.choosenSubcells[gSelectedPieceIndex];
 				
 						if(chooseSubcell.isEmpty()){
 
