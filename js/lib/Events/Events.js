@@ -305,7 +305,7 @@ var InputHandler = Xboard.extend({
 		this.light = light;
 		light = this.light;
 
-		
+choosenSubcells = light.choosenSubcells;		
 this.piecess = piecess;
 piecess = this.piecess;
 var gameRestart = false;
@@ -313,10 +313,7 @@ var gameRestart = false;
 		
 		
 	var blurred = false;
-		window.onclick = function(event){
-			
-
-		}
+	
 		document.onclick = function(event){
 			
 			
